@@ -1,10 +1,9 @@
 import React from 'react';
-//import Sample from './Sample';
-import {Sample} from '.';
+import {Icons} from '.';
 
 export default {
-	title: 'Components/Sample',
-	component: Sample, 
+	title: 'Components/Icons',
+	component: Icons,
 }
 
 export const Default = {
