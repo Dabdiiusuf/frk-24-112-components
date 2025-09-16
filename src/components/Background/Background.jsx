@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Icons = () => {
+const Background = () => {
 	return(
-		<>Icons</>
+		<>Background</>
 	);
 }
 
-export default Icons;
+export default Background;
