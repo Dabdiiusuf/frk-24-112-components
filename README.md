@@ -8,6 +8,6 @@ cd frk-24-112-components
 npm install
 npm run dev
 
-This repo comes with Storybook installed for testing components and documentation.
+This repo comes with Storybook installed for testing components and documentation.  return
 Bash:
 npm run storybook
