@@ -7,3 +7,7 @@ git clone https://github.com/your-username/frk-24-112-components.git
 cd frk-24-112-components
 npm install
 npm run dev
+
+This repo comes with Storybook installed for testing components and documentation.
+Bash:
+npm run storybook
