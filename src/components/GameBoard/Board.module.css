@@ -1,0 +1,16 @@
+.cell {
+	box-sizing:  border-box;
+	transition: 120ms;
+}
+
+.cell:hover {
+	background-color: #81452335;
+}
+
+.dark {
+	background-color: #000;
+}
+
+.light {
+	background-color: ghostwhite;
+}
