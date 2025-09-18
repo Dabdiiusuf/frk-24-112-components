@@ -14,9 +14,11 @@ export default function Timer() {
 
   const minutes = String(Math.floor(timeLeft / 60)).padStart(2, "0");
   const seconds = String(timeLeft % 60).padStart(2, "0");
-  	if (timeLeft <= 0) {
+
+  if (timeLeft <= 0) {
     return <div>Time is up!</div>;
- 	}
+  }
+
   return (
     <div className="text-3xl font-mono">
       {minutes}:{seconds}
