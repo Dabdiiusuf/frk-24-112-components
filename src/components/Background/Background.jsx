@@ -1,8 +1,11 @@
 import React from 'react';
+import BackgroundImg from './Images/Background.png';
 
 const Background = () => {
 	return(
-		<>Background</>
+		<div>
+			<img src={BackgroundImg} alt="Background image" />
+		</div>
 	);
 }
 
