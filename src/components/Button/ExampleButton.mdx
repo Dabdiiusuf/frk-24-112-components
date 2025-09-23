@@ -1,0 +1,146 @@
+# README — How to build Button atoms with ExampleButton.molecule
+
+## This is a dead-simple guide for turning one reusable molecule (ExampleButton) into many tiny atoms (Start, PlayAgain, Timer, etc.).
+
+### 1) What the molecule does
+
+ExampleButton is a generic <button> that can be:
+
+Text-only (normal button), or
+
+Image-skinned (shows PNGs as background for idle/hover/active)
+
+It takes these props:
+
+onClick — function to call on click
+
+children — what to render inside (text or an invisible label)
+
+className — add extra classes from outside
+
+imageSet — { idle, hover, active } image URLs (optional)
+
+width, height — size (number = px, or a CSS string like "10rem")
+
+If imageSet is provided, the molecule applies a background image using CSS variables.
+
+### 2) Build a text atom (no images)
+
+// PrimaryTextButton.atom.jsx
+import React from "react";
+import Button from "./ExampleButton.molecule";
+
+const PrimaryTextButton = ({ onClick, label = "Click me" }) => (
+
+{" "}
+<Button onClick={onClick} className="myExtraClass">
+  {label}
+</Button>
+);
+
+export default PrimaryTextButton;
+
+### use it:
+
+<PrimaryTextButton onClick={() => console.log("clicked")} />
+
+### 3) Build an image-skinned atom
+
+### Import the images you want to use and:
+
+// StartButton.atom.jsx
+import React from "react";
+import Button from "./ExampleButton.molecule";
+import idle from "./images/start-idle.png";
+import hover from "./images/start-hover.png";
+import active from "./images/start-active.png";
+import styles from "./ExampleButton.module.css"; // for .srOnly (optional)
+
+const StartButton = ({ onClick, width = 320, height = 110 }) => (
+
+{" "}
+<Button
+  imageSet={{ idle, hover, active }}
+  width={width}
+  height={height}
+  onClick={onClick}
+>
+  {/* Visible text is optional; this keeps it accessible */}
+  <span className={styles.srOnly}>Start</span>
+</Button>
+);
+
+export default StartButton;
+
+### 4) A logic atom that switches skins (Start ↔ Play Again)
+
+// StartPlayAgain.atom.jsx
+import React from "react";
+import Button from "./ExampleButton.molecule";
+import startIdle from "./images/start-idle.png";
+import startHover from "./images/start-hover.png";
+import startActive from "./images/start-active.png";
+import againIdle from "./images/again-idle.png";
+import againHover from "./images/again-hover.png";
+import againActive from "./images/again-active.png";
+
+const StartPlayAgain = ({
+started = false,
+onStart,
+onPlayAgain,
+width = 320,
+height = 110,
+}) => {
+const imageSet = started
+? { idle: againIdle, hover: againHover, active: againActive }
+: { idle: startIdle, hover: startHover, active: startActive };
+
+const handle = started ? onPlayAgain : onStart;
+
+return (
+<Button imageSet={imageSet} width={width} height={height} onClick={handle}>
+<span className="sr-only">{started ? "Play again" : "Start"}</span>
+</Button>
+);
+};
+
+export default StartPlayAgain;
+
+### 6) Show it in Storybook (no addons needed)
+
+Interactive story using local state:
+
+// Button.stories.jsx
+import React from "react";
+import StartPlayAgain from "./StartPlayAgain.atom";
+
+export default { title: "Components/Button/StartPlayAgain" };
+
+export const Interactive = {
+  render: () => {
+    const [started, setStarted] = React.useState(false);
+    return (
+      <StartPlayAgain
+        started={started}
+        onStart={() => setStarted(true)}
+        onPlayAgain={() => setStarted(false)}
+      />
+    );
+  },
+};
+
+### 7) Mental model (TL;DR)
+
+The molecule is a plain, reusable button. It knows how to paint an image skin but not which one.
+
+Each atom supplies:
+
+which images to use (imageSet)
+
+what size it is (width, height)
+
+what it does (onClick)
+
+optional label via children for accessibility
+
+Build as many atoms as you like by changing those four things—no need to touch the molecule.

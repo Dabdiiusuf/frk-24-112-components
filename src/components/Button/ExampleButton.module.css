@@ -1,8 +1,13 @@
 .button {
   border: 0;
-  padding: 10px;
+  padding: 20px;
   cursor: pointer;
-  background: blue;
+  background: rgb(67, 67, 180, 35%);
+  border-radius: 10px;
+}
+.button:hover {
+  background: rgb(67, 67, 180, 50%);
+  transition: 100ms;
 }
 
 .skin {
