@@ -1,12 +1,19 @@
 .button {
-    padding: 10px 20px;
-    background-color: #007bff;
+    position: relative;
+    background: none;
     border: none;
-    border-radius: 5px;
-    color: white;
+    padding: 0;
     cursor: pointer;
 }
 
-.button:hover {
-    background-color: #0056b3;
+.button img {
+    width: 120px;
+    height: auto;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

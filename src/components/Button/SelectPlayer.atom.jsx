@@ -1,8 +1,11 @@
 import React from 'react';
+import startPlayingAgain from './images/start-playing-again.png';
 
 const SelectPlayer = () => {
 	return (
-		<>SelectPlayer</>
+		<div>
+			<img src={startPlayingAgain} alt="Start Playing Again" />
+		</div>
 	);
 };
 
