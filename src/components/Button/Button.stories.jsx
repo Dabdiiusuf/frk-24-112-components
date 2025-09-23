@@ -5,6 +5,7 @@ import React from "react";
 import TimerButton from "./ExampleTimerButton.atom";
 
 import Button from "./Button.molecule";
+import TestButton from "./ExampleTestButton.atom";
 
 export default {
   title: "Components/Button",
@@ -52,4 +53,8 @@ export const TimerButtonInteractive = {
       />
     );
   },
+};
+
+export const TestButton1 = {
+  render: () => <TestButton onClick={() => alert("hello there")} />,
 };

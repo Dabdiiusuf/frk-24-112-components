@@ -1,8 +1,8 @@
 .button {
   border: 0;
-  padding: 0;
+  padding: 10px;
   cursor: pointer;
-  background: none;
+  background: blue;
 }
 
 .skin {
