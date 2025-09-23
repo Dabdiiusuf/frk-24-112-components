@@ -1,0 +1,7 @@
+.WoodBox {
+	width: 561px;
+	height: 708px;
+	background-image: url("./images/ModalWindow.png");
+	background-size: cover;
+	background-position: center;
+}
