@@ -1,16 +1,8 @@
-import React from 'react';
-import {Timer} from '.';
+import Timer from "./Timer";
 
 export default {
-	title: 'Components/Timer',
+	title: "Components/Timer",
 	component: Timer,
+};
 
-}
-
-export const Default = {
-
-}
-
-export const BreakMyComponent = {
-
-}
+export const Default = {};

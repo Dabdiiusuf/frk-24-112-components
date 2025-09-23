@@ -1,0 +1,27 @@
+.timerWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.timeDisplay {
+    font-size: 1.5rem;
+    font-family: monospace;
+}
+
+.timerButton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.timerButton:disabled {
+    cursor: not-allowed;
+}
+
+.timerIcon {
+    width: 48px;
+    height: 48px;
+}

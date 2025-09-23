@@ -1,12 +1,14 @@
-import Button from "./ExampleButton.molecule";
+import ExampleButton from "./ExampleButton.molecule";
 import Reset from "./Reset.atom";
 import StartPlayAgain from "./ExampleStartPlayAgain.atom";
 import React from "react";
 import TimerButton from "./ExampleTimerButton.atom";
 
+import Button from "./Button.molecule";
+
 export default {
   title: "Components/Button",
-  component: Button,
+  component: ExampleButton,
   subcomponents: { StartPlayAgain },
 };
 
@@ -16,6 +18,8 @@ export const DefaultButton = {
     label: "Click Me",
     onClick: () => alert("Button clicked!"),
   },
+
+  render: () => <Button onClick={() => alert("Done clicked!")} />,
 };
 
 // --- Reset stories ---

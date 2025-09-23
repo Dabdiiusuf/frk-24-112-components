@@ -1,7 +1,14 @@
 import React from "react";
 import styles from "./ExampleButton.module.css";
 
-const Button = ({ onClick, children, className, imageSet, width, height }) => {
+const ExampleButton = ({
+  onClick,
+  children,
+  className,
+  imageSet,
+  width,
+  height,
+}) => {
   const cssVars = {
     ...(imageSet && {
       "--bg": `url(${imageSet.idle})`,
@@ -30,4 +37,4 @@ const Button = ({ onClick, children, className, imageSet, width, height }) => {
   );
 };
 
-export default Button;
+export default ExampleButton;
