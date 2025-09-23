@@ -1,0 +1,29 @@
+import React from "react";
+import Button from "./ExampleButton.molecule.jsx";
+import playAgainWhite from "./images/playAgainWhite.png";
+import playAgainRed from "./images/playAgainRed.png";
+import startWhite from "./images/startWhite.png";
+import startRed from "./images/startRed.png";
+
+const StartPlayAgain = ({
+  started,
+  onStart,
+  onPlayAgain,
+  width = 420,
+  height = 90,
+}) => {
+  const imageSet = started
+    ? { idle: playAgainWhite, hover: playAgainRed, active: playAgainRed }
+    : { idle: startWhite, hover: startRed, active: startRed };
+
+  return (
+    <Button
+      imageSet={imageSet}
+      width={width}
+      height={height}
+      onClick={started ? onPlayAgain : onStart}
+    ></Button>
+  );
+};
+
+export default StartPlayAgain;
