@@ -1,3 +1,4 @@
+{/*
 # README — How to build Button atoms with ExampleButton.molecule
 
 ## This is a dead-simple guide for turning one reusable molecule (ExampleButton) into many tiny atoms (Start, PlayAgain, Timer, etc.).
@@ -144,3 +145,4 @@ what it does (onClick)
 optional label via children for accessibility
 
 Build as many atoms as you like by changing those four things—no need to touch the molecule.
+*/}

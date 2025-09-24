@@ -1,1 +1,1 @@
-export { default as ModalWindow } from "./ModalWindow.molecule";
+export { default as ModalWindow } from './ModalWindow.molecule';
