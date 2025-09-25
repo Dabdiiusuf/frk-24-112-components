@@ -44,6 +44,7 @@ const GameControlPanel = ({
             running={running}
             startSignal={startSignal}
             onComplete={() => setRunning(false)}
+            data-text={Timer}
           />
         </p>
       </div>

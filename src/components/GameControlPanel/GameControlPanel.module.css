@@ -6,7 +6,7 @@
   background-position: center;
   width: 633px;
   display: grid;
-  grid-template-rows: 1.1fr 1.2fr 1fr 0.4fr;
+  grid-template-rows: 1.5fr 1.2fr 1fr 0.4fr;
   filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.75))
     drop-shadow(0 18px 14px rgba(0, 0, 0, 0.45));
 }
@@ -45,12 +45,7 @@
   font-size: 20px;
   text-align: center;
   width: 400px;
-  margin-top: 80px;
-}
-
-.displayTimer {
-  font-size: 30px;
-  color: yellow;
+  margin-top: 65px;
 }
 
 .Player {
