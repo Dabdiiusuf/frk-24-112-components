@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  width: 80%;
+  font-size: 20px;
+}

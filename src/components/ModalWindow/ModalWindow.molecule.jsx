@@ -2,6 +2,8 @@ import { useState } from "react";
 import styles from "./ModalWindow.module.css";
 import { RandomTextArray } from "./RandomWinText.atom";
 import StartPlayAgainBtn from "../Button/ExampleStartPlayAgain.atom";
+import PlayerOneInput from "../Players/FirstPlayer.atom";
+import PlayerTwoInput from "../Players/SecondPlayer.atom";
 
 const ModalWindow = () => {
   const textIndex = Math.floor(Math.random() * RandomTextArray.length);
@@ -15,13 +17,11 @@ const ModalWindow = () => {
         <div className={styles.message}>{randomText}/rules here!</div>
         <div className={styles.inputBox}>
           <div className={styles.player1}>
-            import player1 <br />
-            input here!
+            <PlayerOneInput />
           </div>
 
           <div className={styles.player2}>
-            import player2 <br />
-            input here!
+            <PlayerTwoInput />
           </div>
         </div>
         <div className={styles.btn}>

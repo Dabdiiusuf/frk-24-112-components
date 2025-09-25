@@ -36,6 +36,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0;
+  padding-left: 80px;
+  padding-right: 80px;
   align-items: stretch;
   justify-items: stretch;
 }
