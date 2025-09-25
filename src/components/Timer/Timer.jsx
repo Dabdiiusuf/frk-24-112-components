@@ -1,48 +1,36 @@
 import React, { useState, useEffect } from "react";
 import styles from "../Timer/Timer.module.css";
-import timerDark from "./images/timer-dark.png";
-import timerOrange from "./images/timer-orange.png";
 
-export default function Timer() {
-  const [timeLeft, setTimeLeft] = useState(600);
-  const [isRunning, setIsRunning] = useState(true);
+export default function Timer({
+  duration = 600,
+  running = false,
+  startSignal = 0,
+  onComplete,
+}) {
+  const [timeLeft, setTimeleft] = useState(duration);
 
   useEffect(() => {
-    if (!isRunning || timeLeft <= 0) return;
+    setTimeleft(duration);
+  }, [duration, startSignal]);
 
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => prev - 1);
-    }, 1000);
+  useEffect(() => {
+    if (!running || timeLeft <= 0) return;
+    const id = setInterval(() => setTimeleft((t) => t - 1), 1000);
+    return () => clearInterval(id);
+  }, [running, timeLeft]);
 
-    return () => clearInterval(timer);
-  }, [isRunning, timeLeft]);
-
-  const handleRestart = () => {
-    setTimeLeft(600);
-    setIsRunning(true);
-  };
+  useEffect(() => {
+    if (running && timeLeft <= 0) onComplete?.();
+  }, [running, timeLeft, onComplete]);
 
   const minutes = String(Math.floor(timeLeft / 60)).padStart(2, "0");
   const seconds = String(timeLeft % 60).padStart(2, "0");
 
-  const timeIsUp = timeLeft <= 0;
-
   return (
     <div className={styles.timerWrapper}>
       <div className={styles.timeDisplay}>
-        {timeIsUp ? "Time is up!" : `${minutes}:${seconds}`}
+        {timeLeft <= 0 ? "Time is up!" : `${minutes}:${seconds}`}
       </div>
-      <button
-        onClick={handleRestart}
-        disabled={!timeIsUp}
-        className={styles.timerButton}
-      >
-        <img
-          src={timeIsUp ? timerOrange : timerDark}
-          alt="Timer Button"
-          className={styles.timerIcon}
-        />
-      </button>
     </div>
   );
 }

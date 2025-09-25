@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
+import styles from "./Players.module.css";
 
 const FirstPlayer = () => {
-	return (
-		<div>
-			<label>Player 1</label>
-			<input placeholder="Player 1" />
-		</div>
-	);
+  return (
+    <div className={styles.container}>
+      <label for="P1">Player 1</label>
+      <input type="text" placeholder="Player 1" name="P1" />
+    </div>
+  );
 };
 
 export default FirstPlayer;

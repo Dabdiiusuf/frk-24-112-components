@@ -1,27 +1,33 @@
 .timerWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 
 .timeDisplay {
-    font-size: 1.5rem;
-    font-family: monospace;
+  position: relative;
+  margin-bottom: -15px;
+  font-size: 90px;
+  line-height: 1;
+  letter-spacing: 2px;
+  color: #d51919;
+  mix-blend-mode: multiply;
+  text-shadow: 0 2px 2px rgba(8, 0, 0, 0.85), 0 6px 10px rgba(0, 0, 0, 0.88);
 }
 
 .timerButton {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .timerButton:disabled {
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
 .timerIcon {
-    width: 48px;
-    height: 48px;
+  width: 48px;
+  height: 48px;
 }
