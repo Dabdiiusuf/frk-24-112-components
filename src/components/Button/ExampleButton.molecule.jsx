@@ -27,7 +27,7 @@ const ExampleButton = ({
     <button
       type="button"
       onClick={onClick}
-      className={[styles.button, imageSet && styles.skin, className]
+      className={[styles.base, imageSet && styles.skin, className]
         .filter(Boolean)
         .join(" ")}
       style={cssVars}
