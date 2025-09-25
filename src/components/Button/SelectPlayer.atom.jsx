@@ -1,12 +1,17 @@
 import React from 'react';
-import startPlayingAgain from './images/start-playing-again.png';
+import doneImg from './images/selectPlayerDone.png';
+import playingImg from './images/selectPlayerPlaying.png';
 
-const SelectPlayer = () => {
-	return (
-		<div>
-			<img src={startPlayingAgain} alt="Start Playing Again" />
-		</div>
-	);
+const SelectPlayer = ({ doneActive = false }) => {
+  return (
+    <div>
+      {doneActive ? (
+        <img src={doneImg} alt="done" />
+      ) : (
+        <img src={playingImg} alt="playing" />
+      )}
+    </div>
+  );
 };
 
 export default SelectPlayer;
