@@ -5,7 +5,7 @@ import timerOrange from "./images/timer-orange.png";
 
 export default function Timer() {
   const [timeLeft, setTimeLeft] = useState(600);
-  const [isRunning, setIsRunning] = useState(true);
+  const [isRunning, setIsRunning] = useState(false);
 
   useEffect(() => {
     if (!isRunning || timeLeft <= 0) return;
@@ -17,14 +17,13 @@ export default function Timer() {
     return () => clearInterval(timer);
   }, [isRunning, timeLeft]);
 
-  const handleRestart = () => {
+  const HandleRestart = () => {
     setTimeLeft(600);
     setIsRunning(true);
   };
 
   const minutes = String(Math.floor(timeLeft / 60)).padStart(2, "0");
   const seconds = String(timeLeft % 60).padStart(2, "0");
-
   const timeIsUp = timeLeft <= 0;
 
   return (
@@ -33,12 +32,12 @@ export default function Timer() {
         {timeIsUp ? "Time is up!" : `${minutes}:${seconds}`}
       </div>
       <button
-        onClick={handleRestart}
-        disabled={!timeIsUp}
+        onClick={HandleRestart}
+        disabled={isRunning && !timeIsUp}
         className={styles.timerButton}
       >
         <img
-          src={timeIsUp ? timerOrange : timerDark}
+          src={!isRunning ? timerOrange : timerDark}
           alt="Timer Button"
           className={styles.timerIcon}
         />

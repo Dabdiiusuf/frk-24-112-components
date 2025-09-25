@@ -7,8 +7,8 @@ const TimerButton = ({
   started,
   onStart,
   onStop,
-  width = 139,
-  height = 139,
+  width = 110,
+  height = 110,
 }) => {
   const imageSet = started
     ? { idle: timerRed, active: timerRed }

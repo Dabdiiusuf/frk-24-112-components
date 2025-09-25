@@ -1,0 +1,11 @@
+.boardFrame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./images/boardFrame.png");
+  height: 950px;
+  width: 950px;
+  background-position: center;
+  filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.75))
+    drop-shadow(0 18px 14px rgba(0, 0, 0, 0.45));
+}
