@@ -1,18 +1,19 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import styles from "./ModalWindow.module.css";
-import { RandomTextArray } from "./RandomWinText.atom";
 import StartPlayAgainBtn from "../Button/ExampleStartPlayAgain.atom";
 import PlayerOneInput from "../Players/FirstPlayer.atom";
 import PlayerTwoInput from "../Players/SecondPlayer.atom";
+import { GomokuContext } from "../../providers/GomokuContext";
+import RandomWinText from "./RandomWinText.atom";
 
 const ModalWindow = () => {
-  const textIndex = Math.floor(Math.random() * RandomTextArray.length);
-  const [randomText, setRandomText] = useState(RandomTextArray[textIndex]);
+  const { randomText } = useContext(GomokuContext);
   const [started, setStarted] = useState(false);
 
   return (
     <div className={styles.woodBox}>
       <div className={styles.layout}>
+        <RandomWinText />
         <div className={styles.header}> Import Game Name / Game Over here!</div>
         <div className={styles.message}>{randomText}/rules here!</div>
         <div className={styles.inputBox}>
