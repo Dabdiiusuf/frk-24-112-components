@@ -5,25 +5,40 @@ import playAgainRed from "./images/playAgainRed.png";
 import startWhite from "./images/startWhite.png";
 import startRed from "./images/startRed.png";
 
-const StartPlayAgain = ({
-  started,
+export const PlayAgainButton = ({
+  // started,
   onStart,
   onPlayAgain,
   width = 420,
   height = 90,
 }) => {
-  const imageSet = started
-    ? { idle: playAgainWhite, hover: playAgainRed, active: playAgainRed }
-    : { idle: startWhite, hover: startRed, active: startRed };
+  // const imageSet = started
+  //   ? { idle: playAgainWhite, hover: playAgainRed, active: playAgainRed }
+  //   : { idle: startWhite, hover: startRed, active: startRed };
+  const imageSet = {
+    idle: playAgainWhite,
+    hover: playAgainRed,
+    active: playAgainRed,
+  };
 
   return (
     <Button
       imageSet={imageSet}
       width={width}
       height={height}
-      onClick={started ? onPlayAgain : onStart}
+      // onClick={started ? onPlayAgain : onStart}
     ></Button>
   );
 };
 
-export default StartPlayAgain;
+// export default StartPlayAgain;
+
+export const StartButton = ({ width = 420, height = 90 }) => {
+  const imageSet = {
+    idle: startWhite,
+    hover: startRed,
+    active: startRed,
+  };
+
+  return <Button imageSet={imageSet} width={width} height={height}></Button>;
+};

@@ -4,15 +4,13 @@ import StartPlayAgainBtn from "../Button/ExampleStartPlayAgain.atom";
 import PlayerOneInput from "../Players/FirstPlayer.atom";
 import PlayerTwoInput from "../Players/SecondPlayer.atom";
 import { GomokuContext } from "../../providers/GomokuContext";
-import RandomWinText from "./RandomWinText.atom";
 
 const ModalWindow = () => {
-  const { randomText } = useContext(GomokuContext);
   const [started, setStarted] = useState(false);
 
   return (
     <div className={styles.woodBox}>
-      <div className={styles.layout}>
+      {/* <div className={styles.layout}>
         <RandomWinText />
         <div className={styles.header}> Import Game Name / Game Over here!</div>
         <div className={styles.message}>{randomText}/rules here!</div>
@@ -20,7 +18,6 @@ const ModalWindow = () => {
           <div className={styles.player1}>
             <PlayerOneInput />
           </div>
-
           <div className={styles.player2}>
             <PlayerTwoInput />
           </div>
@@ -32,7 +29,7 @@ const ModalWindow = () => {
             onPlayAgain={() => setStarted(false)}
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
