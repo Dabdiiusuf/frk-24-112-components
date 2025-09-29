@@ -14,7 +14,6 @@
   grid-template-rows: 1fr 2.5fr repeat(2, 1fr);
   grid-column-gap: px;
   grid-row-gap: 0px;
-  /* border: 2px solid green; */
 }
 
 .gameOverHeader {
