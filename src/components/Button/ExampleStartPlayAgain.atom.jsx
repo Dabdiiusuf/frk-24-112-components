@@ -42,3 +42,6 @@ export const StartButton = ({ width = 420, height = 90 }) => {
 
   return <Button imageSet={imageSet} width={width} height={height}></Button>;
 };
+
+const defaultBtn = () => {};
+export default defaultBtn;

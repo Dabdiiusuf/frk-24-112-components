@@ -25,7 +25,7 @@ const GameOver = () => {
   return (
     <div className={styles.woodBox}>
       <div className={styles.layout}>
-        <div className={styles.header}> Game Over</div>
+        <div className={styles.gameOverHeader}> Game Over</div>
         <div className={styles.randomMessage}>
           <div>{randomText}</div>
           <img src={X} alt="X icon" className={styles.icon} />
