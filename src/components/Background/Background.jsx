@@ -7,13 +7,14 @@ const Background = () => {
   return (
     <div className={styles.bgBox}>
       <div className={styles.header}>
-        <h1 className={styles.gameName} data-text="Pirate Gomoku">
+        <h1
+          className={styles.gameName}
+          data-text="Pirate Gomoku"
+        >
           Pirate Gomoku
         </h1>
       </div>
-      <div className={styles.gameBoard}>
-        <GameBoard />
-      </div>
+      <div className={styles.gameBoard}>{/* <GameBoard /> */}</div>
       <div className={styles.gameControlPanelDiv}>
         <GameControlPanel />
       </div>
