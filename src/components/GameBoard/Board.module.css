@@ -1,23 +1,12 @@
-.cell {
-  box-sizing: border-box;
-  transition: 120ms;
-}
-
-.cell:hover {
-  background-color: #81452335;
-}
-
-.dark {
-  background-color: #000;
-}
-
-.light {
-  background-color: ghostwhite;
-}
-
 .container {
   border-radius: 10px;
   max-height: max-content;
   max-width: max-content;
   overflow: hidden;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

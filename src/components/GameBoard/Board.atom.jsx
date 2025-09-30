@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Board.module.css";
 import whiteTile from "./images/white-tile.png";
 import darkTile from "./images/dark-tile.png";
+import Icons from "../Icons/Icons";
 
 const Board = ({ tiles = [[]], rows, cols, size = 61, onCellClick }) => {
   const gridStyle = {
@@ -39,6 +40,10 @@ const Board = ({ tiles = [[]], rows, cols, size = 61, onCellClick }) => {
                 onClick={() => onCellClick?.(row, col, value)}
               >
                 {/* piece will go here when atom created. */}
+                <Icons
+                  value={value}
+                  size={size}
+                />
               </div>
             );
           })
