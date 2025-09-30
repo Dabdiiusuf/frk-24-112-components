@@ -4,3 +4,4 @@ export { default as Board } from "./components/GameBoard/Board.atom";
 export { default as GCP } from "./components/GameControlPanel/GameControlPanel";
 export { default as Icons } from "./components/Icons/Icons";
 export { default as ModalWindow } from "./components/ModalWindow/ModalWindow.molecule";
+export { default as GameOver } from "./components/ModalWindow/GameOver.atom";

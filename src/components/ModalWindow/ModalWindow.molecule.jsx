@@ -1,6 +1,6 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import styles from "./ModalWindow.module.css";
-import { GomokuContext } from "../../providers/GomokuContext";
+import GameOver from "./GameOver.atom";
 
 const ModalWindow = () => {
   return <div className={styles.woodBox}></div>;
