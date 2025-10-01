@@ -12,7 +12,7 @@ const SecondPlayer = () => {
       <input
         type="text"
         // value={playerTwo}
-        onChange={(e) => setPlayerTwo(e.target.value)}
+        // onChange={(e) => setPlayerTwo(e.target.value)}
         placeholder="Player 2"
         name="P2"
       />
