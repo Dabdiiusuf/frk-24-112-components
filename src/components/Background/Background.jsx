@@ -4,7 +4,7 @@ import GameBoard from "../GameBoard/GameBoard.molecule";
 import GameControlPanel from "../GameControlPanel/GameControlPanel";
 
 const Background = ({ children }) => {
-  const [gameArea = null, controlPanel = null] =
+  const [gameArea = null, modalWindow = null, controlPanel = null] =
     React.Children.toArray(children);
 
   return (
@@ -18,8 +18,9 @@ const Background = ({ children }) => {
         </h1>
       </div>
 
-      <div className={styles.gameBoard}>{gameArea}</div>
-      <div className={styles.gameControlPanelDiv}>{controlPanel}</div>
+      <div>{gameArea}</div>
+      <div>{controlPanel}</div>
+      <div>{modalWindow}</div>
     </div>
   );
 };
