@@ -33,14 +33,21 @@ export const PlayAgainButton = ({
 
 // export default StartPlayAgain;
 
-export const StartButton = ({ width = 420, height = 90 }) => {
+export const StartButton = ({ width = 420, height = 90, fetchNewGame }) => {
   const imageSet = {
     idle: startWhite,
     hover: startRed,
     active: startRed,
   };
 
-  return <Button imageSet={imageSet} width={width} height={height}></Button>;
+  return (
+    <Button
+      onClick={fetchNewGame}
+      imageSet={imageSet}
+      width={width}
+      height={height}
+    ></Button>
+  );
 };
 
 const defaultBtn = () => {};

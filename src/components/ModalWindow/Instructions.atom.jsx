@@ -33,7 +33,7 @@ const Instructions = ({ fetchNewGame, inputValue }) => {
           </div>
         </div>
         <div className={styles.btn}>
-          <StartButton onClick={fetchNewGame} />
+          <StartButton fetchNewGame={fetchNewGame} />
         </div>
       </div>
     </div>
