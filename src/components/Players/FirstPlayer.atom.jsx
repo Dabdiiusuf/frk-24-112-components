@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import styles from "./Players.module.css";
 import X from "../Icons/Images/X.png";
 
-const FirstPlayer = () => {
+const FirstPlayer = ({ inputValue }) => {
   return (
     <div className={styles.container}>
       <div className={styles.inputLabel}>
@@ -14,8 +14,8 @@ const FirstPlayer = () => {
       </div>
       <input
         type="text"
-        // value={playerOne}
-        onChange={(e) => setPlayerOne(e.target.value)}
+        value={inputValue}
+        // onChange={(e) => setPlayerOne(e.target.value)}
         placeholder="Player 1"
         name="P1"
       />

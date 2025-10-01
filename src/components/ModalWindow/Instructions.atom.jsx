@@ -4,7 +4,7 @@ import { StartButton } from "../Button/ExampleStartPlayAgain.atom";
 import PlayerOneInput from "../Players/FirstPlayer.atom";
 import PlayerTwoInput from "../Players/SecondPlayer.atom";
 
-const Instructions = ({ fetchNewGame }) => {
+const Instructions = ({ fetchNewGame, inputValue }) => {
   return (
     <div className={styles.woodBox}>
       <div className={styles.layout}>
@@ -26,7 +26,7 @@ const Instructions = ({ fetchNewGame }) => {
         </div>
         <div className={styles.inputBox}>
           <div className={styles.player1}>
-            <PlayerOneInput />
+            <PlayerOneInput inputValue={inputValue} />
           </div>
           <div className={styles.player2}>
             <PlayerTwoInput />
