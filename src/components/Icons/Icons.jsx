@@ -1,14 +1,24 @@
 import React from "react";
-import X from "./Images/X.png";
-import O from "./Images/O.png";
-import styles from "./icons.module.css";
+import playerOne from "./Images/X.png";
+import playerTwo from "./Images/O.png";
+import styles from "./Icons.module.css";
 
-const Icons = () => {
+const Icons = ({ value, size }) => {
+  if (value === 0) return null;
+  const img = value === 1 ? playerOne : playerTwo;
+
   return (
-    <div>
-      <img src={X} alt="X icon" className={styles.shadow} />
-      <img src={O} alt="O icon" className={styles.shadow} />
-    </div>
+    <img
+      src={img}
+      alt={value === 1 ? "Player one" : "Player two"}
+      className={styles.shadow}
+      style={{
+        width: size * 0.8,
+        height: size * 0.8,
+        objectFit: "contain",
+        pointerEvents: "none",
+      }}
+    />
   );
 };
 

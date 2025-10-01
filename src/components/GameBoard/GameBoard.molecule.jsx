@@ -1,14 +1,9 @@
 import React from "react";
-import Board from "./Board.atom";
 
 import styles from "./GameBoard.module.css";
 
-const GameBoard = () => {
-  return (
-    <div className={styles.boardFrame}>
-      <Board />
-    </div>
-  );
+const GameBoard = ({ children }) => {
+  return <div className={styles.boardFrame}>{children}</div>;
 };
 
 export default GameBoard;
