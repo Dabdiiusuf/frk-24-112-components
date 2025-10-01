@@ -1,9 +1,7 @@
-import { useState, useContext } from "react";
-import styles from "./ModalWindow.module.css";
-import { GomokuContext } from "../../providers/GomokuContext";
+import Instructions from "./Instructions.atom";
 
 const ModalWindow = () => {
-  return <div className={styles.woodBox}></div>;
+  return <Instructions />;
 };
 
 export default ModalWindow;
