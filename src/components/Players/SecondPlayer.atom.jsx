@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import styles from "./Players.module.css";
 import O from "../Icons/Images/O.png";
 
