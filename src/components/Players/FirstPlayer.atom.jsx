@@ -1,11 +1,8 @@
 import React, { useContext } from "react";
-import { GomokuContext } from "../../providers/GomokuContext";
 import styles from "./Players.module.css";
 import X from "../Icons/Images/X.png";
 
 const FirstPlayer = () => {
-  const { playerOne, setPlayerOne } = useContext(GomokuContext);
-
   return (
     <div className={styles.container}>
       <div className={styles.inputLabel}>
@@ -14,7 +11,7 @@ const FirstPlayer = () => {
       </div>
       <input
         type="text"
-        value={playerOne}
+        // value={playerOne}
         onChange={(e) => setPlayerOne(e.target.value)}
         placeholder="Player 1"
         name="P1"
