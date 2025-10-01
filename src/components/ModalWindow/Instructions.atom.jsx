@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./ModalWindow.module.css";
 import { StartButton } from "../Button/ExampleStartPlayAgain.atom";
-import PlayerOneInput from "../Players/FirstPlayer.atom";
-import PlayerTwoInput from "../Players/SecondPlayer.atom";
+import PlayerOne from "../Players/FirstPlayer.atom";
+import PlayerTwo from "../Players/SecondPlayer.atom";
 
-const Instructions = ({ fetchNewGame, inputValue }) => {
+const Instructions = ({ fetchNewGame, playerOne, playerTwo }) => {
   return (
     <div className={styles.woodBox}>
       <div className={styles.layout}>
@@ -26,10 +26,10 @@ const Instructions = ({ fetchNewGame, inputValue }) => {
         </div>
         <div className={styles.inputBox}>
           <div className={styles.player1}>
-            <PlayerOneInput inputValue={inputValue} />
+            <PlayerOne playerOne={playerOne} />
           </div>
           <div className={styles.player2}>
-            <PlayerTwoInput />
+            <PlayerTwo playerTwo={playerTwo} />
           </div>
         </div>
         <div className={styles.btn}>

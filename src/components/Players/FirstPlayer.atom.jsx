@@ -2,23 +2,21 @@ import React from "react";
 import styles from "./Players.module.css";
 import X from "../Icons/Images/X.png";
 
-const FirstPlayer = ({ inputValue }) => {
+const FirstPlayer = ({ playerOne }) => {
   return (
     <div className={styles.container}>
       <div className={styles.inputLabel}>
         <label for="P1">Player 1</label>
-        <img
-          src={X}
-          className={styles.playerIcons}
-        ></img>
+        <img src={X} className={styles.playerIcons}></img>
       </div>
-      <input
+      <h5>{playerOne}</h5>
+      {/* <input
         type="text"
         value={inputValue}
-        // onChange={(e) => setPlayerOne(e.target.value)}
+        onChange={(e) => setPlayerOne(e.target.value)}
         placeholder="Player 1"
         name="P1"
-      />
+      /> */}
     </div>
   );
 };
