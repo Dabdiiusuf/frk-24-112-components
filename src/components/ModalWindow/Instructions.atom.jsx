@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import styles from "./ModalWindow.module.css";
 import { StartButton } from "../Button/ExampleStartPlayAgain.atom";
 import PlayerOne from "../Players/FirstPlayer.atom";
 import PlayerTwo from "../Players/SecondPlayer.atom";
 
-const Instructions = ({ fetchNewGame, playerOne, playerTwo }) => {
+const Instructions = ({
+  fetchNewGame,
+  playerOne,
+  playerTwo,
+  createPlayers,
+}) => {
+  // const handlePress = useCallback(() => {
+  //   createPlayers();
+  // }, []);
+
+  // useEffect(() => {
+  //   if (localStorage.getItem("autoPressed") === 1) return;
+  //   localStorage.setItem("autoPressed", "1");
+  //   handlePress();
+  // }, [handlePress]);
+
   return (
     <div className={styles.woodBox}>
       <div className={styles.layout}>
@@ -25,6 +40,7 @@ const Instructions = ({ fetchNewGame, playerOne, playerTwo }) => {
           </p>
         </div>
         <div className={styles.inputBox}>
+          <button onClick={createPlayers}>Generate Player</button>
           <div className={styles.player1}>
             <PlayerOne playerOne={playerOne} />
           </div>
