@@ -7,7 +7,10 @@ const SecondPlayer = () => {
     <div className={styles.container}>
       <div className={styles.inputLabel}>
         <label for="P2">Player 2</label>
-        <img src={O} className={styles.playerIcons}></img>
+        <img
+          src={O}
+          className={styles.playerIcons}
+        ></img>
       </div>
       <input
         type="text"
