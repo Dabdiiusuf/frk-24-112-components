@@ -5,18 +5,10 @@ import O from "../Icons/Images/O.png";
 const SecondPlayer = ({ playerTwo }) => {
   return (
     <div className={styles.container}>
-      <div className={styles.inputLabel}>
-        <label for="P2">Player 2</label>
+      <div className={styles.Label}>
         <img src={O} className={styles.playerIcons}></img>
+        <h5>{playerTwo}</h5>
       </div>
-      <h5>{playerTwo}</h5>
-      {/* <input
-        type="text"
-        // value={playerTwo}
-        // onChange={(e) => setPlayerTwo(e.target.value)}
-        placeholder="Player 2"
-        name="P2"
-      /> */}
     </div>
   );
 };

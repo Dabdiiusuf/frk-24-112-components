@@ -40,12 +40,14 @@ const Instructions = ({
           </p>
         </div>
         <div className={styles.inputBox}>
-          <button onClick={createPlayers}>Generate Player</button>
-          <div className={styles.player1}>
+          <div className={styles.div1}>
             <PlayerOne playerOne={playerOne} />
           </div>
-          <div className={styles.player2}>
+          <div className={styles.div2}>
             <PlayerTwo playerTwo={playerTwo} />
+          </div>
+          <div className={styles.div3}>
+            <button onClick={createPlayers}>Generate Player</button>
           </div>
         </div>
         <div className={styles.btn}>
