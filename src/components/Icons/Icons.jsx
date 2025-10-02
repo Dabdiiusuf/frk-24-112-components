@@ -3,8 +3,8 @@ import playerOne from "./Images/X.png";
 import playerTwo from "./Images/O.png";
 import styles from "./Icons.module.css";
 
-const Icons = ({ playerValue, size }) => {
-  if (playerValue === 0 || playerValue == null) return null;
+const Icons = ({ playerValue, size, ghost = false }) => {
+  if (!playerValue) return null;
   const img = playerValue === 1 ? playerOne : playerTwo;
 
   return (
@@ -13,11 +13,17 @@ const Icons = ({ playerValue, size }) => {
       alt={playerValue === 1 ? "Player one" : "Player two"}
       className={styles.shadow}
       style={{
-        width: size * 0.8,
-        height: size * 0.8,
-        objectFit: "contain",
+        width: Math.floor(size * 0.8),
+        height: Math.floor(size * 0.8),
+        opacity: ghost ? 0.35 : 1,
         pointerEvents: "none",
+        userSelect: "none",
+        objectFit: "contain",
+
+        inset: 0,
+        margin: "auto",
       }}
+      draggable={false}
     />
   );
 };
