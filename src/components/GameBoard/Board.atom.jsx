@@ -41,7 +41,7 @@ const Board = ({ tiles = [[]], rows, cols, size = 61, onCellClick }) => {
               >
                 {/* piece will go here when atom created. */}
                 <Icons
-                  value={value}
+                  playerValue={value}
                   size={size}
                 />
               </div>
