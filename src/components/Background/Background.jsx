@@ -7,7 +7,8 @@ const Background = ({ children }) => {
   const [
     gameArea = null,
     modalWindow = null,
-    gameOver = null,
+    gameDraw = null,
+    // gameWon = null,
     controlPanel = null,
   ] = React.Children.toArray(children);
 
@@ -22,7 +23,8 @@ const Background = ({ children }) => {
       <div>{gameArea}</div>
       <div>{controlPanel}</div>
       <div>{modalWindow}</div>
-      <div>{gameOver}</div>
+      <div>{gameDraw}</div>
+      {/* <div>{gameWon}</div> */}
     </div>
   );
 };
