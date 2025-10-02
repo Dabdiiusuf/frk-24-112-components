@@ -14,12 +14,6 @@ const Instructions = ({
   //   createPlayers();
   // }, []);
 
-  // useEffect(() => {
-  //   if (localStorage.getItem("autoPressed") === 1) return;
-  //   localStorage.setItem("autoPressed", "1");
-  //   handlePress();
-  // }, [handlePress]);
-
   return (
     <div className={styles.woodBox}>
       <div className={styles.layout}>
