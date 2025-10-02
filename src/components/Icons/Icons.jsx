@@ -4,7 +4,7 @@ import playerTwo from "./Images/O.png";
 import styles from "./Icons.module.css";
 
 const Icons = ({ playerValue, size }) => {
-  if (playerValue === 0 || playerValue === null) return null;
+  if (playerValue === 0 || playerValue == null) return null;
   const img = playerValue === 1 ? playerOne : playerTwo;
 
   return (
