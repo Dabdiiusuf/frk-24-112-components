@@ -5,13 +5,15 @@ export default function Timer({
   duration = 600,
   running = false,
   startSignal = 0,
+  resetSignal = 0,
   onComplete,
 }) {
   const [timeLeft, setTimeleft] = useState(duration);
 
+  // Reset timer on duration, startSignal, or resetSignal change
   useEffect(() => {
     setTimeleft(duration);
-  }, [duration, startSignal]);
+  }, [duration, startSignal, resetSignal]);
 
   useEffect(() => {
     if (!running || timeLeft <= 0) return;
