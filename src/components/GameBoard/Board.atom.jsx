@@ -18,17 +18,17 @@ const Board = ({ tiles = [[]], rows, cols, size = 61, onCellClick }) => {
         role="grid"
         aria-label="board"
       >
-        {Array.from({ length: rows }).map((_, row) =>
-          Array.from({ length: cols }).map((_, col) => {
-            const value = tiles?.[row]?.[col] ?? 0;
-            const isDark = (row + col) % 2 === 0;
+        {Array.from({ length: cols }).map((_, col) =>
+          Array.from({ length: rows }).map((_, row) => {
+            const value = tiles?.[col]?.[row] ?? 0;
+            const isDark = (col + row) % 2 === 0;
 
             return (
               <div
                 key={`${row}-${col}`}
                 role="gridcell"
-                aria-rowindex={row + 1}
                 aria-colindex={col + 1}
+                aria-rowindex={row + 1}
                 className={styles.cell}
                 style={{
                   width: size,
@@ -37,7 +37,7 @@ const Board = ({ tiles = [[]], rows, cols, size = 61, onCellClick }) => {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
-                onClick={() => onCellClick?.(row, col, value)}
+                onClick={() => onCellClick?.(col, row, value)}
               >
                 {/* piece will go here when atom created. */}
                 <Icons
