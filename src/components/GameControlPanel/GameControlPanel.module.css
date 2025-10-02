@@ -6,7 +6,7 @@
   background-position: center;
   width: 633px;
   display: grid;
-  grid-template-rows: 1.5fr 1.2fr 1fr 0.4fr;
+  grid-template-rows: 1.2fr 1.2fr 1fr 0.4fr;
   filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.75))
     drop-shadow(0 18px 14px rgba(0, 0, 0, 0.45));
 }
@@ -22,6 +22,8 @@
 .firstStone {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 12px;
   margin-top: 15px;
 }
@@ -29,6 +31,8 @@
 .secondStone {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 12px;
   margin-top: 15px;
 }
@@ -57,4 +61,13 @@
   justify-content: space-around;
   align-items: center;
   margin-bottom: 10px;
+}
+
+.icons {
+  width: 100px;
+  height: 100px;
+}
+
+.Players {
+  font-size: 20px;
 }
