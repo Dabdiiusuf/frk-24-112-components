@@ -4,7 +4,7 @@
 }
 
 .woodBox {
-  color: white;
+  color: rgba(53, 27, 1, 0.889);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +15,17 @@
   z-index: 999;
 }
 
+.paper {
+  grid-area: 2 / 1 / 4 / 2;
+  background: url("./images/paper.png") center / contain no-repeat;
+  z-index: 0;
+  pointer-events: none;
+  height: auto;
+  background-size: 75% 539px;
+}
+
 .layout {
+  position: relative;
   display: grid;
   width: 661px;
   height: 850px;
@@ -86,7 +96,18 @@
   padding: 0 110px;
   grid-area: 2 / 1 / 3 / 2;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
+}
+
+.instructionsMessage p {
+  margin: 0;
+}
+
+.instructionsMessage,
+.nameBox,
+.randomMessage {
+  position: relative;
+  z-index: 1;
 }
 
 .title {
@@ -94,18 +115,13 @@
   font-size: 25px;
 }
 
-.instructionsMessage p {
-  margin: 0;
-}
-
 .randomMessage {
   display: flex;
   flex-direction: column;
-  color: #f4ede1;
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 20px;
+  row-gap: 20px;
   padding-left: 80px;
   padding-right: 80px;
   font-size: 24px;
@@ -120,7 +136,7 @@
   align-items: center;
   justify-content: center;
   column-gap: 40px;
-  row-gap: 8px;
+  /* row-gap: 8px; */
 }
 .p1NameBox,
 .p2NameBox {
@@ -171,7 +187,7 @@
   align-items: center;
   justify-content: center;
   width: 80px;
-  height: 58px;
+  height: 48px;
   padding: 0;
   cursor: pointer;
   border: 1px solid #1f1f1f;
