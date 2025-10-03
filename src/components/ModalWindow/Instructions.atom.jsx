@@ -11,6 +11,7 @@ const Instructions = ({
   playerTwo,
   createPlayers,
   error,
+  closeInstructions,
 }) => {
   // const handlePress = useCallback(() => {
   //   createPlayers();
@@ -59,7 +60,7 @@ const Instructions = ({
           </div>
         </div>
         <div className={styles.btn}>
-          <StartButton fetchNewGame={fetchNewGame} />
+          <StartButton fetchNewGame={fetchNewGame || closeInstructions} />
         </div>
       </div>
     </div>

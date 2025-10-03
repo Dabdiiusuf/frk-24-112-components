@@ -20,6 +20,7 @@
   margin: 0;
   width: 100%;
   max-width: 100%;
+  position: relative;
 }
 .gameName {
   position: relative;
@@ -69,4 +70,34 @@
   margin: 0;
   width: 100%;
   max-width: 100%;
+}
+
+.generateBtn {
+  display: inline-flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  padding: 0px 25px;
+  height: 48px;
+  cursor: pointer;
+  border: 1px solid #1f1f1f;
+  border-radius: 14px;
+  background: linear-gradient(#5b3103, #5b3103);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35),
+    inset 0 2px 4px rgba(255, 255, 255, 0.22),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.35);
+}
+.generateBtn:hover {
+  background: linear-gradient(#492702, #492702);
+}
+.generateBtn:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35),
+    inset 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+.buttonWrapper {
+  position: absolute;
+  right: 0;
 }
