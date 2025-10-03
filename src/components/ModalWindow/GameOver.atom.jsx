@@ -8,9 +8,17 @@ const GameOver = ({ playAgainReset, GameOverText }) => {
     <div className={styles.woodBox}>
       <div className={styles.layout}>
         <div className={styles.gameOverHeader}> Game Over</div>
+        <div
+          className={styles.paper}
+          aria-hidden
+        />
         <div className={styles.randomMessage}>
           <div>{GameOverText}</div>
-          <img src={X} alt="X icon" className={styles.icon} />
+          <img
+            src={X}
+            alt="X icon"
+            className={styles.icon}
+          />
         </div>
         <div className={styles.btn}>
           <PlayAgainButton playAgainReset={playAgainReset} />
