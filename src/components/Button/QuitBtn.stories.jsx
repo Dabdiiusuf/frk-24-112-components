@@ -1,9 +1,9 @@
 import React from 'react';
-import Quit from './QuitBtn.atom';
+import QuitBtn from './QuitBtn.atom';
 
 export default {
 	title: 'Components/Button/QuitBtn',
-	component: Quit,
+	component: QuitBtn,
 }
 
 export const Default = {
