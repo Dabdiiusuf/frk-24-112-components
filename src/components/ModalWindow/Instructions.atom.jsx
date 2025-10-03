@@ -41,7 +41,7 @@ const Instructions = ({
             <PlayerTwo playerTwo={playerTwo} />
           </div>
           <div className={styles.div3}>
-            <button onClick={createPlayers}>Generate Player</button>
+            <button onClick={createPlayers}>Generate Pirate</button>
           </div>
         </div>
         <div className={styles.btn}>
