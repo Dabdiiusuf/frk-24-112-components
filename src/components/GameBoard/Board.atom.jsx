@@ -22,11 +22,7 @@ const Board = ({
 
   return (
     <div className={styles.container}>
-      <div
-        style={gridStyle}
-        role="grid"
-        aria-label="board"
-      >
+      <div style={gridStyle} role="grid" aria-label="board">
         {Array.from({ length: cols }).map((_, col) =>
           Array.from({ length: rows }).map((_, row) => {
             const value = tiles?.[col]?.[row] ?? 0;
@@ -57,11 +53,7 @@ const Board = ({
                 onClick={() => onCellClick?.(col, row, value)}
               >
                 {/* piece will go here when atom created. */}
-                <Icons
-                  playerValue={displayValue}
-                  size={size}
-                  ghost={isGhost}
-                />
+                <Icons playerValue={displayValue} size={size} ghost={isGhost} />
               </div>
             );
           })

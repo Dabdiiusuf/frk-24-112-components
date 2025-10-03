@@ -7,7 +7,12 @@ import X from "../Icons/Images/X.png";
 import O from "../Icons/Images/O.png";
 import PlayingDone from "../Button/images/playing-done.png";
 
-const GameControlPanel = ({ playerOne, playerTwo }) => {
+const GameControlPanel = ({
+  playerOne,
+  playerTwo,
+  firstPoints,
+  secondPoints,
+}) => {
   const [running, setRunning] = useState(false);
   const [startSignal, setStartSignal] = useState(0);
 
@@ -22,13 +27,13 @@ const GameControlPanel = ({ playerOne, playerTwo }) => {
       <div className={styles.stoneBoard}>
         <div className={styles.firstStone}>
           <div className={styles.Players}>{playerOne}</div>
-          <p>Points: 3</p>
+          <p>Points: {firstPoints}</p>
           <img src={X} alt="X icon" className={styles.icons} />
           <img src={PlayingDone} alt="X icon" />
         </div>
         <div className={styles.secondStone}>
           <div className={styles.Players}>{playerTwo}</div>
-          <p>Points: 1</p>
+          <p>Points: {secondPoints}</p>
           <img src={O} alt="X icon" className={styles.icons} />
           <img src={PlayingDone} alt="X icon" />
         </div>
