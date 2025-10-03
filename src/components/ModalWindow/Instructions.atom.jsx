@@ -1,8 +1,9 @@
-import React, { useCallback, useEffect, useRef } from "react";
+import React from "react";
 import styles from "./ModalWindow.module.css";
 import { StartButton } from "../Button/ExampleStartPlayAgain.atom";
 import PlayerOne from "../Players/FirstPlayer.atom";
 import PlayerTwo from "../Players/SecondPlayer.atom";
+import Generate from "./images/generate.png";
 
 const Instructions = ({
   fetchNewGame,
@@ -19,9 +20,9 @@ const Instructions = ({
       <div className={styles.layout}>
         <div className={styles.instructionsHeader}>
           <div className={styles.subHeader}>PIRATE GOMOKU</div>
-          <h2>How to play</h2>
         </div>
         <div className={styles.instructionsMessage}>
+          <h2 className={styles.title}>How to play</h2>
           <p>1. Players take turns placing their piece inside the squares. </p>
           <p>2. Black moves first.</p>
           <p>
@@ -33,15 +34,25 @@ const Instructions = ({
             5. The first player to make an unbroken line of five wins the game.
           </p>
         </div>
-        <div className={styles.inputBox}>
-          <div className={styles.div1}>
+        <div className={styles.nameBox}>
+          <div className={styles.p1NameBox}>
             <PlayerOne playerOne={playerOne} />
           </div>
-          <div className={styles.div2}>
+          <div className={styles.p2NameBox}>
             <PlayerTwo playerTwo={playerTwo} />
           </div>
           <div className={styles.div3}>
-            <button onClick={createPlayers}>Generate Pirate</button>
+            <button
+              onClick={createPlayers}
+              className={styles.generateBtn}
+              aria-label="Generate pirate names"
+            >
+              <img
+                src={Generate}
+                alt="Generate pirate names"
+                draggable="false"
+              />
+            </button>
           </div>
         </div>
         <div className={styles.btn}>
