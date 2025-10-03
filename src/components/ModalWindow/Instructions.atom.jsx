@@ -10,6 +10,7 @@ const Instructions = ({
   playerOne,
   playerTwo,
   createPlayers,
+  error,
 }) => {
   // const handlePress = useCallback(() => {
   //   createPlayers();
@@ -21,10 +22,7 @@ const Instructions = ({
         <div className={styles.instructionsHeader}>
           <div className={styles.subHeader}>PIRATE GOMOKU</div>
         </div>
-        <div
-          className={styles.paper}
-          aria-hidden
-        />
+        <div className={styles.paper} aria-hidden />
         <div className={styles.instructionsMessage}>
           <h2 className={styles.title}>How to play</h2>
           <p>1. Players take turns placing their piece inside the squares. </p>
@@ -37,6 +35,7 @@ const Instructions = ({
           <p>
             5. The first player to make an unbroken line of five wins the game.
           </p>
+          <h2 className={styles.errorMessage}>{error}</h2>
         </div>
         <div className={styles.nameBox}>
           <div className={styles.p1NameBox}>

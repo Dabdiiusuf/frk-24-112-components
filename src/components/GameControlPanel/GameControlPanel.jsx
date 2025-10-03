@@ -23,28 +23,14 @@ const GameControlPanel = ({ playerOne, playerTwo }) => {
         <div className={styles.firstStone}>
           <div className={styles.Players}>{playerOne}</div>
           <p>Points: 3</p>
-          <img
-            src={X}
-            alt="X icon"
-            className={styles.icons}
-          />
-          <img
-            src={PlayingDone}
-            alt="X icon"
-          />
+          <img src={X} alt="X icon" className={styles.icons} />
+          <img src={PlayingDone} alt="X icon" />
         </div>
         <div className={styles.secondStone}>
           <div className={styles.Players}>{playerTwo}</div>
           <p>Points: 1</p>
-          <img
-            src={O}
-            alt="X icon"
-            className={styles.icons}
-          />
-          <img
-            src={PlayingDone}
-            alt="X icon"
-          />
+          <img src={O} alt="X icon" className={styles.icons} />
+          <img src={PlayingDone} alt="X icon" />
         </div>
       </div>
       <div className={styles.message}>
@@ -52,7 +38,7 @@ const GameControlPanel = ({ playerOne, playerTwo }) => {
           ARRR, IT BE <span className={styles.Player}>{playerOne}</span> ONE'S
           TURN! MAKE YER MOVE, MATEY, AFORE THE TIDE CHANGES!
         </p>
-        <p className={styles.displayTimer}>
+        <div className={styles.displayTimer}>
           <Timer
             duration={600}
             running={running}
@@ -60,13 +46,10 @@ const GameControlPanel = ({ playerOne, playerTwo }) => {
             onComplete={() => setRunning(false)}
             data-text={Timer}
           />
-        </p>
+        </div>
       </div>
       <div className={styles.timerReset}>
-        <TimerButton
-          running={running}
-          onStart={handleStart}
-        />
+        <TimerButton running={running} onStart={handleStart} />
         <ResetBtn />
       </div>
     </div>
