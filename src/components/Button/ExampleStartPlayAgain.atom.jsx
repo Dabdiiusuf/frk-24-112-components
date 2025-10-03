@@ -5,7 +5,11 @@ import playAgainRed from "./images/playAgainRed.png";
 import startWhite from "./images/startWhite.png";
 import startRed from "./images/startRed.png";
 
-export const PlayAgainButton = ({ width = 420, height = 90 }) => {
+export const PlayAgainButton = ({
+  width = 420,
+  height = 90,
+  playAgainReset,
+}) => {
   const imageSet = {
     idle: playAgainWhite,
     hover: playAgainRed,
@@ -17,11 +21,10 @@ export const PlayAgainButton = ({ width = 420, height = 90 }) => {
       imageSet={imageSet}
       width={width}
       height={height}
+      onClick={playAgainReset}
     ></Button>
   );
 };
-
-// export default StartPlayAgain;
 
 export const StartButton = ({ width = 420, height = 90, fetchNewGame }) => {
   const imageSet = {
