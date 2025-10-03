@@ -8,14 +8,17 @@ const Background = ({ children }) => {
     gameArea = null,
     modalWindow = null,
     gameDraw = null,
-    // gameWon = null,
+    gameWon = null,
     controlPanel = null,
   ] = React.Children.toArray(children);
 
   return (
     <div className={styles.bgBox}>
       <div className={styles.header}>
-        <h1 className={styles.gameName} data-text="Pirate Gomoku">
+        <h1
+          className={styles.gameName}
+          data-text="Pirate Gomoku"
+        >
           Pirate Gomoku
         </h1>
       </div>
@@ -24,7 +27,7 @@ const Background = ({ children }) => {
       <div>{controlPanel}</div>
       <div>{modalWindow}</div>
       <div>{gameDraw}</div>
-      {/* <div>{gameWon}</div> */}
+      <div>{gameWon}</div>
     </div>
   );
 };
