@@ -3,12 +3,15 @@ import styles from "./Backgound.module.css";
 import GameBoard from "../GameBoard/GameBoard.molecule";
 import GameControlPanel from "../GameControlPanel/GameControlPanel";
 
-const Background = ({
-  gameArea = <GameBoard />,
-  controlPanel = <GameControlPanel playerOne="Daniel" playerTwo="Jack" />,
-  modalWindow = null,
-  gameDraw = null,
-}) => {
+const Background = ({ children }) => {
+  const [
+    gameArea = null,
+    modalWindow = null,
+    gameDraw = null,
+    // gameWon = null,
+    controlPanel = null,
+  ] = React.Children.toArray(children);
+
   return (
     <div className={styles.bgBox}>
       <div className={styles.header}>
@@ -17,15 +20,11 @@ const Background = ({
         </h1>
       </div>
 
-      {/* Main Game Board */}
       <div>{gameArea}</div>
-
-      {/* Control Panel */}
       <div>{controlPanel}</div>
-
-      {/* Optional modal or draw */}
       <div>{modalWindow}</div>
       <div>{gameDraw}</div>
+      {/* <div>{gameWon}</div> */}
     </div>
   );
 };

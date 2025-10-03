@@ -3,31 +3,17 @@ import styles from "./GameControlPanel.module.css";
 import ResetBtn from "../Button/Reset.atom";
 import TimerButton from "../Button/ExampleTimerButton.atom";
 import Timer from "../Timer/Timer";
+import X from "../Icons/Images/X.png";
+import O from "../Icons/Images/O.png";
+import PlayingDone from "../Button/images/playing-done.png";
 
-const GameControlPanel = ({
-  FirstPlayer = "Daniel",
-  SecondPlayer = "Player 2",
-}) => {
+const GameControlPanel = ({ playerOne, playerTwo }) => {
   const [running, setRunning] = useState(false);
   const [startSignal, setStartSignal] = useState(0);
-  const [resetSignal, setResetSignal] = useState(0);
-
-  // ✅ Start with initial points (not 0)
-  const [firstPlayerPoints, setFirstPlayerPoints] = useState(3);
-  const [secondPlayerPoints, setSecondPlayerPoints] = useState(1);
 
   const handleStart = () => {
     setStartSignal((s) => s + 1);
     setRunning(true);
-  };
-
-  const handleReset = () => {
-    setRunning(false);
-    setResetSignal((r) => r + 1);
-
-    // ✅ Reset points to 0 when reset button is clicked
-    setFirstPlayerPoints(0);
-    setSecondPlayerPoints(0);
   };
 
   return (
@@ -35,21 +21,21 @@ const GameControlPanel = ({
       <div></div>
       <div className={styles.stoneBoard}>
         <div className={styles.firstStone}>
-          <p>{FirstPlayer}</p>
-          <p>Points: {firstPlayerPoints}</p>
-          <p>Icon</p>
-          <p>"Playing"</p>
+          <div className={styles.Players}>{playerOne}</div>
+          <p>Points: 3</p>
+          <img src={X} alt="X icon" className={styles.icons} />
+          <img src={PlayingDone} alt="X icon" />
         </div>
         <div className={styles.secondStone}>
-          <p>{SecondPlayer}</p>
-          <p>Points: {secondPlayerPoints}</p>
-          <p>Icon</p>
-          <p>Done</p>
+          <div className={styles.Players}>{playerTwo}</div>
+          <p>Points: 1</p>
+          <img src={O} alt="X icon" className={styles.icons} />
+          <img src={PlayingDone} alt="X icon" />
         </div>
       </div>
       <div className={styles.message}>
         <p className={styles.playerTurn}>
-          ARRR, IT BE <span className={styles.Player}>{FirstPlayer}</span> ONE'S
+          ARRR, IT BE <span className={styles.Player}>{playerOne}</span> ONE'S
           TURN! MAKE YER MOVE, MATEY, AFORE THE TIDE CHANGES!
         </p>
         <p className={styles.displayTimer}>
@@ -57,14 +43,14 @@ const GameControlPanel = ({
             duration={600}
             running={running}
             startSignal={startSignal}
-            resetSignal={resetSignal}
             onComplete={() => setRunning(false)}
+            data-text={Timer}
           />
         </p>
       </div>
       <div className={styles.timerReset}>
         <TimerButton running={running} onStart={handleStart} />
-        <ResetBtn onReset={handleReset} />
+        <ResetBtn />
       </div>
     </div>
   );
