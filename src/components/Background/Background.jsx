@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Backgound.module.css";
-import GameBoard from "../GameBoard/GameBoard.molecule";
-import GameControlPanel from "../GameControlPanel/GameControlPanel";
+import InstrBtn from "../Button/InstrBtn.atom";
 
 const Background = ({ children, openInstructions }) => {
   const [
@@ -20,9 +19,7 @@ const Background = ({ children, openInstructions }) => {
           Pirate Gomoku
         </h1>
         <div className={styles.buttonWrapper}>
-          <button className={styles.generateBtn} onClick={openInstructions}>
-            Instructions
-          </button>
+          <InstrBtn openInstructions={openInstructions} />
         </div>
       </div>
 

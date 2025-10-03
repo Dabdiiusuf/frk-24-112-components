@@ -1,8 +1,13 @@
-import React from 'react';
+import React from "react";
+import styles from "./Button.module.css";
 
-const InstrBtn = () => {
+const InstrBtn = ({ openInstructions }) => {
   return (
-    <>Instructions Button</>
+    <div>
+      <button className={styles.generateBtn} onClick={openInstructions}>
+        Instructions
+      </button>
+    </div>
   );
 };
 
