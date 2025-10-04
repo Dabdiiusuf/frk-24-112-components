@@ -5,13 +5,15 @@ import TimerButton from "../Button/ExampleTimerButton.atom";
 import Timer from "../Timer/Timer";
 import X from "../Icons/Images/X.png";
 import O from "../Icons/Images/O.png";
-import PlayingDone from "../Button/images/playing-done.png";
+import doneImg from "../Button/images/selectPlayerDone.png";
+import playingImg from "../Button/images/selectPlayerPlaying.png";
 
 const GameControlPanel = ({
   playerOne,
   playerTwo,
   firstPoints,
   secondPoints,
+  currentPlayer,
 }) => {
   const [running, setRunning] = useState(false);
   const [startSignal, setStartSignal] = useState(0);
@@ -29,13 +31,21 @@ const GameControlPanel = ({
           <div className={styles.Players}>{playerOne}</div>
           <p>Points: {firstPoints}</p>
           <img src={X} alt="X icon" className={styles.icons} />
-          <img src={PlayingDone} alt="X icon" />
+          {currentPlayer === 1 ? (
+            <img src={playingImg} alt="playing" />
+          ) : (
+            <img src={doneImg} alt="done" />
+          )}
         </div>
         <div className={styles.secondStone}>
           <div className={styles.Players}>{playerTwo}</div>
           <p>Points: {secondPoints}</p>
           <img src={O} alt="X icon" className={styles.icons} />
-          <img src={PlayingDone} alt="X icon" />
+          {currentPlayer === 2 ? (
+            <img src={playingImg} alt="playing" />
+          ) : (
+            <img src={doneImg} alt="done" />
+          )}
         </div>
       </div>
       <div className={styles.message}>

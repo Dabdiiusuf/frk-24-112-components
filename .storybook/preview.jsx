@@ -1,5 +1,4 @@
 import "../src/index.css";
-import { GomokuContextProvider } from "../src/providers/GomokuContext";
 
 /** @type { import('@storybook/react-vite').Preview } */
 const preview = {
@@ -21,11 +20,7 @@ const preview = {
   decorators: [
     (Story) => {
       console.log("[storybook] GomokuContextProvider decorator applied");
-      return (
-        <GomokuContextProvider>
-          <Story />
-        </GomokuContextProvider>
-      );
+      return <Story />;
     },
   ],
 };
