@@ -161,7 +161,7 @@
   height: auto;
 }
 
-.btn {
+.btnRow {
   display: flex;
   justify-content: center;
   align-items: center;
