@@ -49,10 +49,15 @@ const GameControlPanel = ({
         </div>
       </div>
       <div className={styles.message}>
-        <p className={styles.playerTurn}>
-          ARRR, IT BE <span className={styles.Player}>{playerOne}</span> ONE'S
-          TURN! MAKE YER MOVE, MATEY, AFORE THE TIDE CHANGES!
-        </p>
+        <div className={styles.playerTurn}>
+          ARRR, IT BE{" "}
+          {currentPlayer === 1 ? (
+            <span className={styles.Player}>{playerOne}</span>
+          ) : (
+            <span className={styles.Player}>{playerTwo}</span>
+          )}{" "}
+          ONE'S TURN! MAKE YER MOVE, MATEY, AFORE THE TIDE CHANGES!
+        </div>
         <div className={styles.displayTimer}>
           <Timer
             duration={600}
