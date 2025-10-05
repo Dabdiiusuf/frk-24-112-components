@@ -20,7 +20,7 @@ export const QuitBtn = ({ onQuit }) => {
           }}
         >
           <img
-            src={hover ? quitDefault : quitHover}
+            src={hover ? quitHover : quitDefault}
             alt="Quit Game"
             width={110}
             height={110}
