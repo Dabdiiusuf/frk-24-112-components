@@ -25,7 +25,7 @@ const Board = ({
       <div style={gridStyle} role="grid" aria-label="board">
         {Array.from({ length: cols }).map((_, col) =>
           Array.from({ length: rows }).map((_, row) => {
-            const value = tiles?.[col]?.[row] ?? 0;
+            const value = tiles?.[col + 1]?.[row + 1] ?? 0;
             const isDark = (col + row) % 2 === 0;
             const isHovered = hovered.col === col && hovered.row === row;
 
