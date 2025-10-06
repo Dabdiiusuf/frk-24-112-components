@@ -3,9 +3,9 @@ import styles from "./ModalWindow.module.css";
 import { PlayAgainButton } from "../Button/ExampleStartPlayAgain.atom";
 import X from "../Icons/Images/X.png";
 import O from "../Icons/Images/O.png";
-import QuitBtn from "../Button/QuitBtn.atom";
+import ResetBtn from "../Button/Reset.atom";
 
-const GameOver = ({ GameOverText, playAgain, firstIcon, onQuit }) => {
+const GameOver = ({ GameOverText, playAgain, firstIcon, resetGame }) => {
   return (
     <div className={styles.woodBox}>
       <div className={styles.layout}>
@@ -21,7 +21,7 @@ const GameOver = ({ GameOverText, playAgain, firstIcon, onQuit }) => {
         </div>
         <div className={styles.btnRow}>
           <PlayAgainButton playAgain={playAgain} />
-          <QuitBtn onQuit={onQuit}/>
+          <ResetBtn resetGame={resetGame} />
         </div>
       </div>
     </div>

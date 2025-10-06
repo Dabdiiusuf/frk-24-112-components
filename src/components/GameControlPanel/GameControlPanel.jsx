@@ -14,6 +14,7 @@ const GameControlPanel = ({
   firstPoints,
   secondPoints,
   currentPlayer,
+  resetGame,
 }) => {
   const [running, setRunning] = useState(false);
   const [startSignal, setStartSignal] = useState(0);
@@ -70,7 +71,7 @@ const GameControlPanel = ({
       </div>
       <div className={styles.timerReset}>
         <TimerButton running={running} onStart={handleStart} />
-        <ResetBtn />
+        <ResetBtn resetGame={resetGame} />
       </div>
     </div>
   );
