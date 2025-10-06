@@ -7,6 +7,7 @@ import X from "../Icons/Images/X.png";
 import O from "../Icons/Images/O.png";
 import doneImg from "../Button/images/selectPlayerDone.png";
 import playingImg from "../Button/images/selectPlayerPlaying.png";
+import Instructions from "../ModalWindow/Instructions.atom";
 
 const GameControlPanel = ({
   playerOne,

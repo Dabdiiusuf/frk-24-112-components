@@ -13,10 +13,6 @@ const Instructions = ({
   error,
   closeInstructions,
 }) => {
-  // const handlePress = useCallback(() => {
-  //   createPlayers();
-  // }, []);
-
   return (
     <div className={styles.woodBox}>
       <div className={styles.layout}>

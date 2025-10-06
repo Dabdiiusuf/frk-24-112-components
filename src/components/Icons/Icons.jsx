@@ -3,8 +3,9 @@ import playerOne from "./Images/X.png";
 import playerTwo from "./Images/O.png";
 import styles from "./Icons.module.css";
 
-const Icons = ({ playerValue, size, ghost = false }) => {
+const Icons = ({ playerValue, size, ghost = false, firstIcon }) => {
   if (!playerValue) return null;
+
   const img = playerValue === 1 ? playerOne : playerTwo;
 
   return (
