@@ -161,6 +161,16 @@
   height: auto;
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  grid-area: 4 / 1 / 5 / 2;
+  filter: drop-shadow(0 3px 1px rgba(0, 0, 0, 0.65))
+    drop-shadow(0 3px 3px rgba(0, 0, 0, 0.55));
+}
+
 .btnRow {
   display: flex;
   justify-content: center;

@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./ModalWindow.module.css";
 import { PlayAgainButton } from "../Button/ExampleStartPlayAgain.atom";
-import { QuitBtn } from "../Button/QuitBtn.atom";
 import X from "../Icons/Images/X.png";
 import O from "../Icons/Images/O.png";
+import QuitBtn from "../Button/QuitBtn.atom";
 
 const GameOver = ({ GameOverText, playAgain, firstIcon, onQuit }) => {
   return (
@@ -21,7 +21,7 @@ const GameOver = ({ GameOverText, playAgain, firstIcon, onQuit }) => {
         </div>
         <div className={styles.btnRow}>
           <PlayAgainButton playAgain={playAgain} />
-          <QuitBtn onQuit={onQuit} />
+          <QuitBtn onQuit={onQuit}/>
         </div>
       </div>
     </div>

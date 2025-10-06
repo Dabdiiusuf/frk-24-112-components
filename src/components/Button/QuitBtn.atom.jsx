@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import quitDefault from "./images/timerGray.png";
 import quitHover from "./images/timerRed.png"; //change "default" and "hover" to proper color names once design is finished
 
-export const QuitBtn = ({ onQuit }) => {
+const QuitBtn = ({ onQuit }) => {
   const [hover, setHover] = useState(false);
   return (
         <button
