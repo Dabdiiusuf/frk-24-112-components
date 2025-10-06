@@ -2,7 +2,7 @@
   "name": "@dabdikeef/components",
   "main": "./dist/index.js",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
