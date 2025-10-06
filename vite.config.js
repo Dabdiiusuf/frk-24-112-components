@@ -1,6 +1,7 @@
 /// <reference types="vitest/config" />
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import cssInjectedByJs from "vite-plugin-css-injected-by-js";
 
 // https://vite.dev/config/
 import path from "node:path";
@@ -13,7 +14,17 @@ const dirname =
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-  plugins: [react()],
+  plugins: [cssInjectedByJs(), react()],
+  build: {
+    lib: { entry: "src/index.js", formats: ["es"], fileName: () => "index.js" },
+    rollupOptions: {
+      external: ["react", "react-dom"],
+      output: { inlineDynamicImports: true },
+    },
+    cssCodeSplit: false,
+    minify: "esbuild",
+    sourcemap: true,
+  },
   css: { modules: { localsConvention: "camelCase" } },
   test: {
     projects: [
