@@ -26,6 +26,8 @@
   align-items: center;
   gap: 12px;
   margin-top: 15px;
+  height: auto;
+  width: 190px;
 }
 
 .secondStone {
@@ -35,6 +37,8 @@
   align-items: center;
   gap: 12px;
   margin-top: 15px;
+  height: auto;
+  width: 190px;
 }
 
 .message {
@@ -64,10 +68,12 @@
 }
 
 .icons {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
+  filter: drop-shadow(0 3px 1px rgba(0, 0, 0, 0.65))
+    drop-shadow(0 3px 3px rgba(0, 0, 0, 0.55));
 }
 
 .Players {
-  font-size: 20px;
+  font-size: 12px;
 }
