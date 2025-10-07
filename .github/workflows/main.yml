@@ -8,5 +8,8 @@ jobs:
   react_on_push: 
       runs-on: ubuntu-latest
       steps:
-      - name: Print Message
-        run: echo 'This workflow runs on any push to any branch.'
+      - name: Discord
+        uses: sebastianpopp/discord-action@v2.0
+        with: 
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          message: ${{ github.actor }} has successfully pushed to main.
