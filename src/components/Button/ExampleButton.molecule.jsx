@@ -2,12 +2,12 @@ import React from "react";
 import styles from "./ExampleButton.module.css";
 
 const ExampleButton = ({
-  onClick,
   children,
   className,
   imageSet,
   width,
   height,
+  onClick,
 }) => {
   const cssVars = {
     ...(imageSet && {

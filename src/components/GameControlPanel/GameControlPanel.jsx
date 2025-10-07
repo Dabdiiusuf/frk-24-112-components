@@ -16,15 +16,10 @@ const GameControlPanel = ({
   secondPoints,
   currentPlayer,
   resetGame,
+  startTimer,
+  running,
+  timeLeft,
 }) => {
-  const [running, setRunning] = useState(false);
-  const [startSignal, setStartSignal] = useState(0);
-
-  const handleStart = () => {
-    setStartSignal((s) => s + 1);
-    setRunning(true);
-  };
-
   return (
     <div className={styles.panelContainer}>
       <div></div>
@@ -61,17 +56,11 @@ const GameControlPanel = ({
           ONE'S TURN! MAKE YER MOVE, MATEY, AFORE THE TIDE CHANGES!
         </div>
         <div className={styles.displayTimer}>
-          <Timer
-            duration={600}
-            running={running}
-            startSignal={startSignal}
-            onComplete={() => setRunning(false)}
-            data-text={Timer}
-          />
+          <Timer timeLeft={timeLeft} />
         </div>
       </div>
       <div className={styles.timerReset}>
-        <TimerButton running={running} onStart={handleStart} />
+        <TimerButton startTimer={startTimer} running={running} />
         <ResetBtn resetGame={resetGame} />
       </div>
     </div>
