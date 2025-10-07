@@ -13,22 +13,27 @@ const Background = ({ children, openInstructions }) => {
   ] = React.Children.toArray(children);
 
   return (
-    <div className={styles.bgBox}>
-      <div className={styles.header}>
-        <h1 className={styles.gameName} data-text="Pirate Gomoku">
-          Pirate Gomoku
-        </h1>
-        <div className={styles.buttonWrapper}>
-          <InstrBtn openInstructions={openInstructions} />
+    <div className={styles.background}>
+      <div className={styles.gameBox}>
+        <div className={styles.header}>
+          <h1
+            className={styles.gameName}
+            data-text="Pirate Gomoku"
+          >
+            Pirate Gomoku
+          </h1>
+          <div className={styles.buttonWrapper}>
+            <InstrBtn openInstructions={openInstructions} />
+          </div>
         </div>
-      </div>
 
-      <div>{gameArea}</div>
-      <div>{controlPanel}</div>
-      <div>{modalWindow}</div>
-      <div>{instructionsModal}</div>
-      <div>{gameDraw}</div>
-      <div>{gameWon}</div>
+        <div>{gameArea}</div>
+        <div>{controlPanel}</div>
+        <div>{modalWindow}</div>
+        <div>{instructionsModal}</div>
+        <div>{gameDraw}</div>
+        <div>{gameWon}</div>
+      </div>
     </div>
   );
 };
