@@ -6,7 +6,7 @@
   background-position: center;
   width: 633px;
   display: grid;
-  grid-template-rows: 1.2fr 1.2fr 1fr 0.4fr;
+  grid-template-rows: 1.2fr 1.1fr 1.1fr 0.5fr;
   filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.75))
     drop-shadow(0 18px 14px rgba(0, 0, 0, 0.45));
 }
@@ -28,6 +28,8 @@
   margin-top: 15px;
   height: auto;
   width: 190px;
+  filter: drop-shadow(0 3px 1px rgba(0, 0, 0, 0.65))
+    drop-shadow(0 3px 3px rgba(0, 0, 0, 0.55));
 }
 
 .secondStone {
@@ -39,6 +41,8 @@
   margin-top: 15px;
   height: auto;
   width: 190px;
+  filter: drop-shadow(0 3px 1px rgba(0, 0, 0, 0.65))
+    drop-shadow(0 3px 3px rgba(0, 0, 0, 0.55));
 }
 
 .message {
@@ -65,13 +69,13 @@
   justify-content: space-around;
   align-items: center;
   margin-bottom: 10px;
+  filter: drop-shadow(0 7px 3px rgba(0, 0, 0, 0.65))
+    drop-shadow(0 3px 3px rgba(0, 0, 0, 0.55));
 }
 
 .icons {
   width: 70px;
   height: 70px;
-  filter: drop-shadow(0 3px 1px rgba(0, 0, 0, 0.65))
-    drop-shadow(0 3px 3px rgba(0, 0, 0, 0.55));
 }
 
 .Players {

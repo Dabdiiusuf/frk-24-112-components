@@ -61,6 +61,7 @@ const GameControlPanel = ({
       </div>
       <div className={styles.timerReset}>
         <TimerButton startTimer={startTimer} running={running} />
+
         <ResetBtn resetGame={resetGame} />
       </div>
     </div>

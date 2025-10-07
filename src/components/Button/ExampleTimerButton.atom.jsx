@@ -3,7 +3,7 @@ import Button from "./ExampleButton.molecule.jsx";
 import timerGray from "./images/timerGray.png";
 import timerRed from "./images/timerRed.png";
 
-const TimerButton = ({ running, width = 110, height = 110, startTimer }) => {
+const TimerButton = ({ running, width = 65, height = 65, startTimer }) => {
   const imageSet = running
     ? { idle: timerGray, active: timerGray }
     : { idle: timerRed, active: timerRed };
