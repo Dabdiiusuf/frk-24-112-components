@@ -122,8 +122,8 @@
   align-items: center;
   text-align: center;
   row-gap: 20px;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 90px;
+  padding-right: 90px;
   font-size: 24px;
   grid-area: 2 / 1 / 4 / 2;
 }
@@ -134,7 +134,7 @@
   grid-template-rows: auto auto;
   align-items: center;
   justify-content: center;
-  column-gap: 40px;
+  column-gap: 30px;
 }
 .p1NameBox,
 .p2NameBox {
