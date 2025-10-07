@@ -5,27 +5,27 @@ import quitHover from "./images/timerRed.png"; //change "default" and "hover" to
 const QuitBtn = ({ onQuit }) => {
   const [hover, setHover] = useState(false);
   return (
-        <button
-          onClick={onQuit}
-          onMouseEnter={() => setHover(true)}
-          onMouseLeave={() => setHover(false)}
-          style={{
-            background: "none",
-            border: "none",
-            padding: 0,
-            cursor: "pointer",
-            margin: 0,
-            height: 110,
-            width: 110,
-          }}
-        >
-          <img
-            src={hover ? quitHover : quitDefault}
-            alt="Quit Game"
-            width={110}
-            height={110}
-          />
-        </button>
+    <button
+      onClick={onQuit}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      style={{
+        background: "none",
+        border: "none",
+        padding: 0,
+        cursor: "pointer",
+        margin: 0,
+        height: 80,
+        width: 80,
+      }}
+    >
+      <img
+        src={hover ? quitHover : quitDefault}
+        alt="Quit Game"
+        width={80}
+        height={80}
+      />
+    </button>
   );
 };
 

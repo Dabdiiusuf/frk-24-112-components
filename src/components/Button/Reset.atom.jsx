@@ -16,15 +16,15 @@ const Reset = ({ resetGame }) => {
         padding: 0,
         cursor: "pointer",
         margin: 0,
-        height: 110,
-        width: 110,
+        height: 65,
+        width: 65,
       }}
     >
       <img
         src={hover ? restartOrange : restartDark}
         alt="Reset Game"
-        width={110}
-        height={110}
+        width={65}
+        height={65}
       />
     </button>
   );
