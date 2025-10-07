@@ -16,15 +16,10 @@ const GameControlPanel = ({
   secondPoints,
   currentPlayer,
   resetGame,
+  startTimer,
+  running,
+  timeLeft,
 }) => {
-  const [running, setRunning] = useState(false);
-  const [startSignal, setStartSignal] = useState(0);
-
-  const handleStart = () => {
-    setStartSignal((s) => s + 1);
-    setRunning(true);
-  };
-
   return (
     <div className={styles.panelContainer}>
       <div></div>
@@ -32,41 +27,21 @@ const GameControlPanel = ({
         <div className={styles.firstStone}>
           <div className={styles.Players}>{playerOne}</div>
           <p>Points: {firstPoints}</p>
-          <img
-            src={X}
-            alt="X icon"
-            className={styles.icons}
-          />
+          <img src={X} alt="X icon" className={styles.icons} />
           {currentPlayer === 1 ? (
-            <img
-              src={playingImg}
-              alt="playing"
-            />
+            <img src={playingImg} alt="playing" />
           ) : (
-            <img
-              src={doneImg}
-              alt="done"
-            />
+            <img src={doneImg} alt="done" />
           )}
         </div>
         <div className={styles.secondStone}>
           <div className={styles.Players}>{playerTwo}</div>
           <p>Points: {secondPoints}</p>
-          <img
-            src={O}
-            alt="X icon"
-            className={styles.icons}
-          />
+          <img src={O} alt="X icon" className={styles.icons} />
           {currentPlayer === 2 ? (
-            <img
-              src={playingImg}
-              alt="playing"
-            />
+            <img src={playingImg} alt="playing" />
           ) : (
-            <img
-              src={doneImg}
-              alt="done"
-            />
+            <img src={doneImg} alt="done" />
           )}
         </div>
       </div>
@@ -81,20 +56,12 @@ const GameControlPanel = ({
           ONE'S TURN! MAKE YER MOVE, MATEY, AFORE THE TIDE CHANGES!
         </div>
         <div className={styles.displayTimer}>
-          <Timer
-            duration={600}
-            running={running}
-            startSignal={startSignal}
-            onComplete={() => setRunning(false)}
-            data-text={Timer}
-          />
+          <Timer timeLeft={timeLeft} />
         </div>
       </div>
       <div className={styles.timerReset}>
-        <TimerButton
-          running={running}
-          onStart={handleStart}
-        />
+        <TimerButton startTimer={startTimer} running={running} />
+
         <ResetBtn resetGame={resetGame} />
       </div>
     </div>

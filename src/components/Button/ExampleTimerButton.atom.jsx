@@ -3,19 +3,24 @@ import Button from "./ExampleButton.molecule.jsx";
 import timerGray from "./images/timerGray.png";
 import timerRed from "./images/timerRed.png";
 
-const TimerButton = ({ running, onStart, width = 65, height = 65 }) => {
+const TimerButton = ({ running, width = 65, height = 65, startTimer }) => {
   const imageSet = running
     ? { idle: timerGray, active: timerGray }
     : { idle: timerRed, active: timerRed };
 
   return (
-    <Button
+    <button
       imageSet={imageSet}
       width={width}
       height={height}
-      disabled={running}
-      onClick={running ? undefined : onStart}
-    />
+      // disabled={running}
+      onClick={() => {
+        console.log("clicked");
+        startTimer();
+      }}
+    >
+      press
+    </button>
   );
 };
 
