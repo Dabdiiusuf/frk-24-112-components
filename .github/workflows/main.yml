@@ -1,0 +1,15 @@
+name: Components
+
+on: 
+  push:
+      branches: [ main ]
+
+jobs:
+  react_on_push: 
+      runs-on: ubuntu-latest
+      steps:
+      - name: Discord
+        uses: sebastianpopp/discord-action@v2.0
+        with: 
+          webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          message: ${{ github.actor }} has successfully pushed to main.

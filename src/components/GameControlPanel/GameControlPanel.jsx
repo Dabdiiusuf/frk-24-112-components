@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./GameControlPanel.module.css";
 import ResetBtn from "../Button/Reset.atom";
 import TimerButton from "../Button/ExampleTimerButton.atom";
@@ -26,23 +26,27 @@ const GameControlPanel = ({
       <div className={styles.stoneBoard}>
         <div className={styles.firstStone}>
           <div className={styles.Players}>{playerOne}</div>
-          <p>Points: {firstPoints}</p>
-          <img src={X} alt="X icon" className={styles.icons} />
-          {currentPlayer === 1 ? (
-            <img src={playingImg} alt="playing" />
-          ) : (
-            <img src={doneImg} alt="done" />
-          )}
+          <section className={styles.p1StoneInfo}>
+            <p>Points: {firstPoints}</p>
+            <img src={X} alt="X icon" className={styles.icons} />
+            {currentPlayer === 1 ? (
+              <img src={playingImg} alt="playing" />
+            ) : (
+              <img src={doneImg} alt="done" />
+            )}
+          </section>
         </div>
         <div className={styles.secondStone}>
           <div className={styles.Players}>{playerTwo}</div>
-          <p>Points: {secondPoints}</p>
-          <img src={O} alt="X icon" className={styles.icons} />
-          {currentPlayer === 2 ? (
-            <img src={playingImg} alt="playing" />
-          ) : (
-            <img src={doneImg} alt="done" />
-          )}
+          <section className={styles.p1StoneInfo}>
+            <p>Points: {secondPoints}</p>
+            <img src={O} alt="X icon" className={styles.icons} />
+            {currentPlayer === 2 ? (
+              <img src={playingImg} alt="playing" />
+            ) : (
+              <img src={doneImg} alt="done" />
+            )}
+          </section>
         </div>
       </div>
       <div className={styles.message}>
