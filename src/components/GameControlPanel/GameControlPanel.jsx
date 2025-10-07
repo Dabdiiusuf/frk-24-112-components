@@ -15,7 +15,7 @@ const GameControlPanel = ({
   firstPoints,
   secondPoints,
   currentPlayer,
-  resetGame,
+  handleResetAgain,
   startTimer,
   running,
   timeLeft,
@@ -61,8 +61,7 @@ const GameControlPanel = ({
       </div>
       <div className={styles.timerReset}>
         <TimerButton startTimer={startTimer} running={running} />
-
-        <ResetBtn resetGame={resetGame} />
+        <ResetBtn handleResetAgain={handleResetAgain} />
       </div>
     </div>
   );

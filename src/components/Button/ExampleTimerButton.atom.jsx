@@ -1,25 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./ExampleButton.molecule.jsx";
 import timerGray from "./images/timerGray.png";
 import timerRed from "./images/timerRed.png";
+import styles from "./ExampleButton.module.css";
 
-const TimerButton = ({ running, width = 65, height = 65, startTimer }) => {
-  const imageSet = running
-    ? { idle: timerGray, active: timerGray }
-    : { idle: timerRed, active: timerRed };
+const TimerButton = ({ startTimer }) => {
+  const [hover, setHover] = useState(false);
 
   return (
     <button
-      imageSet={imageSet}
-      width={width}
-      height={height}
-      // disabled={running}
       onClick={() => {
         console.log("clicked");
         startTimer();
       }}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      className={styles.resetButton}
     >
-      press
+      <img
+        src={hover ? timerRed : timerGray}
+        alt="Reset Game"
+        className={styles.resetBtnIMG}
+      />
     </button>
   );
 };
