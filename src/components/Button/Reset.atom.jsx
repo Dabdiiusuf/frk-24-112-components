@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import restartDark from "./images/restart-dark.png";
 import restartOrange from "./images/restart-orange.png";
+import styles from "./ExampleButton.module.css";
 
 const Reset = ({ resetGame }) => {
   const [hover, setHover] = useState(false);
@@ -10,21 +11,12 @@ const Reset = ({ resetGame }) => {
       onClick={() => resetGame()}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
-      style={{
-        background: "none",
-        border: "none",
-        padding: 0,
-        cursor: "pointer",
-        margin: 0,
-        height: 65,
-        width: 65,
-      }}
+      className={styles.resetButton}
     >
       <img
         src={hover ? restartOrange : restartDark}
         alt="Reset Game"
-        width={65}
-        height={65}
+        className={styles.resetBtnIMG}
       />
     </button>
   );
