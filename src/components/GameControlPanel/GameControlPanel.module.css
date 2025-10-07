@@ -19,28 +19,25 @@
   padding-right: 80px;
 }
 
-.firstStone {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  margin-top: 15px;
-  height: auto;
-  width: 190px;
-  filter: drop-shadow(0 3px 1px rgba(0, 0, 0, 0.65))
-    drop-shadow(0 3px 3px rgba(0, 0, 0, 0.55));
-}
-
+.firstStone,
 .secondStone {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  width: 190px;
+  margin-top: 20px;
+}
+
+.p1StoneInfo,
+.p2StoneInfo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 12px;
   margin-top: 15px;
   height: auto;
-  width: 190px;
   filter: drop-shadow(0 3px 1px rgba(0, 0, 0, 0.65))
     drop-shadow(0 3px 3px rgba(0, 0, 0, 0.55));
 }
@@ -82,4 +79,10 @@
 
 .Players {
   font-size: 12px;
+  position: static;
+  overflow: hidden;
+  line-height: 1.2;
+  height: calc(1.2em * 2);
+  max-width: 100%;
+  text-align: center;
 }
