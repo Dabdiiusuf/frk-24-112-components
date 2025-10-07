@@ -15,7 +15,7 @@ const GameControlPanel = ({
   firstPoints,
   secondPoints,
   currentPlayer,
-  resetGame,
+  handleResetAgain,
   startTimer,
   running,
   timeLeft,
@@ -28,21 +28,11 @@ const GameControlPanel = ({
           <div className={styles.Players}>{playerOne}</div>
           <section className={styles.p1StoneInfo}>
             <p>Points: {firstPoints}</p>
-            <img
-              src={X}
-              alt="X icon"
-              className={styles.icons}
-            />
+            <img src={X} alt="X icon" className={styles.icons} />
             {currentPlayer === 1 ? (
-              <img
-                src={playingImg}
-                alt="playing"
-              />
+              <img src={playingImg} alt="playing" />
             ) : (
-              <img
-                src={doneImg}
-                alt="done"
-              />
+              <img src={doneImg} alt="done" />
             )}
           </section>
         </div>
@@ -50,21 +40,11 @@ const GameControlPanel = ({
           <div className={styles.Players}>{playerTwo}</div>
           <section className={styles.p1StoneInfo}>
             <p>Points: {secondPoints}</p>
-            <img
-              src={O}
-              alt="X icon"
-              className={styles.icons}
-            />
+            <img src={O} alt="X icon" className={styles.icons} />
             {currentPlayer === 2 ? (
-              <img
-                src={playingImg}
-                alt="playing"
-              />
+              <img src={playingImg} alt="playing" />
             ) : (
-              <img
-                src={doneImg}
-                alt="done"
-              />
+              <img src={doneImg} alt="done" />
             )}
           </section>
         </div>
@@ -84,12 +64,8 @@ const GameControlPanel = ({
         </div>
       </div>
       <div className={styles.timerReset}>
-        <TimerButton
-          startTimer={startTimer}
-          running={running}
-        />
-
-        <ResetBtn resetGame={resetGame} />
+        <TimerButton startTimer={startTimer} running={running} />
+        <ResetBtn handleResetAgain={handleResetAgain} />
       </div>
     </div>
   );
