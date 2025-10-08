@@ -57,7 +57,7 @@ const GameControlPanel = ({
           ) : (
             <span className={styles.Player}>{playerTwo}</span>
           )}{" "}
-          ONE'S TURN!! MAKE YER MOVE, MATEY, AFORE THE TIDE CHANGES!
+          ONE'S TURN! MAKE YER MOVE, MATEY, AFORE THE TIDE CHANGES!
         </div>
         <div className={styles.displayTimer}>
           <Timer timeLeft={timeLeft} />
