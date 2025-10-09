@@ -26,7 +26,7 @@ const Instructions = ({
         <div className={styles.instructionsMessage}>
           <h2 className={styles.title}>How to play</h2>
           <p>1. Players take turns placing their piece inside the squares. </p>
-          <p>2. Black moves first!</p>
+          <p>2. Black moves first.</p>
           <p>
             3. The objective is to get five in a row (horizontally, vertically,
             or diagonally).
